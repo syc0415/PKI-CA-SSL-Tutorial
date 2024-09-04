@@ -93,7 +93,7 @@ Alice 給Bob她的public key，Bob將資料用收到的public key加密傳回Ali
 - **根憑證（Root Certificate）：**
     - 根憑證是一種自簽的憑證（Self-Signed certificate），具有相同的憑證發行者名稱（Issuer Name）與憑證持有者名稱（Subject Name）
     - 由根憑證機構（Root CA）自己的私鑰來簽發根憑證機構自己的公鑰。
-    - 沒有上層機構再為其本身作數位簽章，所以都是自簽憑證，擔任[**信任鏈**](static\trust_anchor.md)起點的角色。
+    - 沒有上層機構再為其本身作數位簽章，所以都是自簽憑證，擔任[**信任鏈**](static/trust_anchor.md)起點的角色。
     - 可利用Windows內建之MMC、或是在指令列輸入***certmgr.msc***查看
     
     ![MMC.png](static/MMC.png)
