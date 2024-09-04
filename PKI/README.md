@@ -21,7 +21,7 @@
 1. **CA, Certificate Authority**：
     - *CA* 是 PKI 的核心，負責簽發、管理、撤銷證書。
     - 是可信任的第三方機構，透過簽名證書來驗證證書擁有者的身份。
-    - 參考: [*CA*](..\CA\README.md)
+    - 參考: [*CA*](../CA/README.md)
 2. **RA, Registration Authority**：
     - *RA* 是 *CA* 的輔助機構，負責驗證用戶身份並向 *CA* 提交證書簽發請求。
     - 讓 *CA* 不需要直接與所有用戶進行交互，具有更高的安全性。
