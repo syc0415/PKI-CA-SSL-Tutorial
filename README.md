@@ -313,5 +313,5 @@
 
 ## VII. OpenZiti TLS Simulation
 
-- link to README
-- link to simulation
+- [link to README](https://google.com)
+- [link to simulation](https://google.com)
