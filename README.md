@@ -119,7 +119,7 @@
 ## II. PKI 運作機制
 
 - 憑證的申請與簽發：
-    - 用戶生成密鑰對並向 RA 提交憑證申請。RA **驗證用戶身份後，將請求轉發給 CA。
+    - 用戶生成密鑰對並向 RA 提交憑證申請。RA 驗證用戶身份後，將請求轉發給 CA。
     - CA 收到申請、並驗證申請者的真實身分後，把申請者的公鑰、身分資訊、憑證的有效期等訊息打包在一起，使用雜湊函式生成雜湊值。最後，CA 使用自己的私鑰對這個雜湊值進行簽署，生成數位簽章。
     - 數位簽章與原始資訊（申請者的公鑰、身分資訊、憑證的有效期等）一起組成完整的數位憑證。
     - CA 簽發憑證並將其發送給用戶和憑證儲存庫。
@@ -226,7 +226,7 @@
         
     - **非對稱加密：** 使用一對公鑰和私鑰進行加密和解密（例如 [RSA](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-3/rsa.html)）。
     
-    [asymmetricEncryption.avif](static/asymmetricEncryption.avif)
+        [asymmetricEncryption.avif](static/asymmetricEncryption.avif)
     
 
 ### SSL（安全套接層）
@@ -277,17 +277,17 @@
         </aside>
         
         1. **ClientHello：** 客戶端向伺服器發送「ClientHello」消息。這個消息包含了 TLS 版本、加密套件（加密算法）、壓縮方法以及客戶端隨機號碼、壓縮方法。
-        2. **ServerHello：**伺服器收到「ClientHello」後，會傳回「ServerHello」，表示接受了某個加密套件和 TLS 版本。伺服器也會發送自己的隨機號碼，用來幫助生成密鑰。
-        3. **ServerCertificate：**伺服器會將自己的數位憑證發送給客戶端。客戶端可以使用它來驗證伺服器的身份。
-        4. **ServerKeyExchange：**如果加密協商中需要額外的密鑰材料（例如 DH 或 ECDH 交換），伺服器就會發送「ServerKeyExchange」消息
-        5. **CertificateRequest：**伺服器可以請求客戶端提供自己的數位憑證，以便進行雙向身份驗證。
-        6. **ServerHelloDone：**伺服器發送「ServerHelloDone」，表示伺服器已經完成所有初始通信，等待客戶端回應。
-        7. **ClientCertificate：**客戶端回應自己的數位憑證。
-        8. **ClientKeyExchange：**客戶端生成一個「預先主密金鑰」（pre-master secret），然後用伺服器的公鑰加密，並將它發送給伺服器。
-        9. **CertificateVerify：**客戶端發送了自己的憑證後，就會發送「CertificateVerify」，完成身份驗證。
-        10. **ChangeCipherSpec**：客戶端通知伺服器使用新的加密方法。
-        11. **Finished：**客戶端發送「Finished」，代表整個握手過程已經完成。
-        12. **Application Data：**握手完成後，雙方就可以開始加密通信
+        2. **ServerHello：** 伺服器收到「ClientHello」後，會傳回「ServerHello」，表示接受了某個加密套件和 TLS 版本。伺服器也會發送自己的隨機號碼，用來幫助生成密鑰。
+        3. **ServerCertificate：** 伺服器會將自己的數位憑證發送給客戶端。客戶端可以使用它來驗證伺服器的身份。
+        4. **ServerKeyExchange：** 如果加密協商中需要額外的密鑰材料（例如 DH 或 ECDH 交換），伺服器就會發送「ServerKeyExchange」消息
+        5. **CertificateRequest：** 伺服器可以請求客戶端提供自己的數位憑證，以便進行雙向身份驗證。
+        6. **ServerHelloDone：** 伺服器發送「ServerHelloDone」，表示伺服器已經完成所有初始通信，等待客戶端回應。
+        7. **ClientCertificate：** 客戶端回應自己的數位憑證。
+        8. **ClientKeyExchange：** 客戶端生成一個「預先主密金鑰」（pre-master secret），然後用伺服器的公鑰加密，並將它發送給伺服器。
+        9. **CertificateVerify：** 客戶端發送了自己的憑證後，就會發送「CertificateVerify」，完成身份驗證。
+        10. **ChangeCipherSpec：** 客戶端通知伺服器使用新的加密方法。
+        11. **Finished：** 客戶端發送「Finished」，代表整個握手過程已經完成。
+        12. **Application Data：** 握手完成後，雙方就可以開始加密通信
 
 ### TLS 1.3（RFC8446）
 
@@ -305,9 +305,9 @@
         💡TLS 1.3 handshake 流程
         </aside>
         
-    1. **ClientHello：**內容新增了密鑰交換算法（如 key_share）、PSK 模式等。
-    2. **ServerHello：**伺服器提供自己的 key_share 和 PSK 信息，並加入了加密擴展。
-    3. **EncryptedExtensions**：伺服器發送加密的擴展信息，進行更多的加密配置。
+    1. **ClientHello：** 內容新增了密鑰交換算法（如 key_share）、PSK 模式等。
+    2. **ServerHello：** 伺服器提供自己的 key_share 和 PSK 信息，並加入了加密擴展。
+    3. **EncryptedExtensions：** 伺服器發送加密的擴展信息，進行更多的加密配置。
     4. **Certificate 和 CertificateVerify**
     5. **Finished**
 
