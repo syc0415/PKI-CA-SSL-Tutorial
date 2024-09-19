@@ -112,7 +112,7 @@
     ![triangle-struct.png](static/triangle-struct.png)
     
     <aside>
-    💡PKI、RP、EE關係示意圖
+    💡PKI、RP、EE 關係示意圖
     </aside>
     
 
@@ -181,7 +181,7 @@
 - **身份憑證（Identity Certificate）：**
     - 為一般的數位憑證 ，使用 X.509 v3 的格式（所有憑證均使用此格式）。
     
-    ![getCertificate.jpg](static\getCertificate.jpg)
+    ![getCertificate.jpg](static/getCertificate.jpg)
     
 - **根憑證（Root Certificate）：**
     - 根憑證是一種自簽的憑證（Self-Signed certificate），具有相同的憑證發行者名稱（Issuer Name）與憑證持有者名稱（Subject Name）
