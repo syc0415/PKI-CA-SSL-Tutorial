@@ -222,11 +222,11 @@
 - 加密方法
     - **對稱加密：** 加密和解密使用相同的金鑰（例如：[DES](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-1/des.html) \ [AES](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-1/aes.html)）。
         
-        [symmetricEncyrption.avif](static/symmetricEncyrption.avif)
+        ![symmetricEncyrption.avif](static/symmetricEncyrption.avif)
         
     - **非對稱加密：** 使用一對公鑰和私鑰進行加密和解密（例如 [RSA](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-3/rsa.html)）。
     
-        [asymmetricEncryption.avif](static/asymmetricEncryption.avif)
+        ![asymmetricEncryption.avif](static/asymmetricEncryption.avif)
     
 
 ### SSL（安全套接層）
