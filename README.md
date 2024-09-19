@@ -304,11 +304,11 @@
         💡TLS 1.3 handshake 流程
         </aside>
         
-    1. **ClientHello：** 內容新增了密鑰交換算法（如 key_share）、PSK 模式等。
-    2. **ServerHello：** 伺服器提供自己的 key_share 和 PSK 信息，並加入了加密擴展。
-    3. **EncryptedExtensions：** 伺服器發送加密的擴展信息，進行更多的加密配置。
-    4. **Certificate 和 CertificateVerify**
-    5. **Finished**
+      1. **ClientHello：** 內容新增了密鑰交換算法（如 key_share）、PSK 模式等。
+      2. **ServerHello：** 伺服器提供自己的 key_share 和 PSK 信息，並加入了加密擴展。
+      3. **EncryptedExtensions：** 伺服器發送加密的擴展信息，進行更多的加密配置。
+      4. **Certificate 和 CertificateVerify**
+      5. **Finished**
 
 ## VII. OpenZiti TLS Simulation
 
