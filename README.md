@@ -7,10 +7,7 @@
 ![Public-Key-Infrastructure.png](static/Public-Key-Infrastructure.png)
 
 <aside>
-💡
-
-PKI架構示意圖
-
+💡PKI架構示意圖
 </aside>
 
 ### **1. 憑證授權機構（Certificate Authority, CA）**
@@ -22,9 +19,11 @@ PKI架構示意圖
 
 - RA 是 CA 的輔助機構，在架構中扮演承上啟下的角色，負責驗證用戶身份並向 CA 提交憑證簽發請求。
 - 讓 CA 不需要直接與所有用戶進行交互，具有更高的安全性。
-- 用戶透過 RA 向 CA 申請數位憑證
     
     ![RA_flow.png](static/RA_flow.png)
+    <aside>
+    💡用戶透過 RA 向 CA 申請數位憑證
+    </aside>
     
 - 功能：
     1. **身份驗證**：
@@ -52,14 +51,9 @@ PKI架構示意圖
         - **驗證簽章**：接收者使用發送者的公鑰解密還原 hash 值（下方路徑），並對訊息原文經過 函式計算出 hash 值（上方路徑）。如果兩者的 hash 值一致，則說明文件未被篡改且簽名者的身份有效。
         
         ![digitalSignature.png](static/digitalSignature.png)
-        
-    
-    <aside>
-    💡
-    
-    數位簽章流程示意圖
-    
-    </aside>
+            <aside>
+            💡數位簽章流程示意圖
+            </aside>
     
 - **數位憑證（Digital Certificate）**
     - 數位憑證是一種電子文件，用於證明一個實體（如個人、組織或伺服器）的身份，並確保該實體的公鑰屬於該實體。
@@ -68,15 +62,10 @@ PKI架構示意圖
         1. **持有者的身份資訊**：如持有者的名稱、電子郵件地址、組織等。
         2. **持有者的公鑰**：與持有者私鑰對應的公鑰，憑證持有者用於進行加密和簽署數位簽章。
         3. **有效期**：數位憑證通常有一個有效期，過期後需重新申請。
-        ![digitalCertificate.png](static/digitalCertificate.png)
-        
-    
-    <aside>
-    💡
-    
-    數位憑證內容示意圖
-    
-    </aside>
+        ![digitalCertificate.png](static/digitalCertificate.png) 
+            <aside>
+            💡數位憑證內容示意圖
+            </aside>
     - 運作流程：
         - **申請**：用戶向 CA 提交申請，並提供身份資訊及其公鑰。
         - **驗證身份**：CA 對申請者的身份進行驗證。
@@ -84,12 +73,8 @@ PKI架構示意圖
         - **使用**：憑證持有者在與其他人通信或進行加密操作時，可以提供數位憑證以證明其身份，對方可以使用 CA 的公鑰來驗證憑證的真實性，進而信任持有者的公鑰。
             
             ![Digital-Certificate-flow.png](static\Digital-Certificate-flow.png)
-            
             <aside>
-            💡
-            
-            憑證的申請、發布、使用的簡單示意圖
-            
+            💡憑證的申請、發布、使用的簡單示意圖
             </aside>
             
 
@@ -127,9 +112,7 @@ PKI架構示意圖
     ![triangle-struct.png](static/triangle-struct.png)
     
     <aside>
-    💡
-    
-    - PKI、RP、EE關係示意圖
+    💡PKI、RP、EE關係示意圖
     </aside>
     
 
@@ -289,6 +272,9 @@ PKI架構示意圖
     - 握手（Handshake）概述：
         
         ![tls12.png](static/tls12.png)
+        <aside>
+        💡TLS 1.2 handshake 流程
+        </aside>
         
         1. **ClientHello：** 客戶端向伺服器發送「ClientHello」消息。這個消息包含了 TLS 版本、加密套件（加密算法）、壓縮方法以及客戶端隨機號碼、壓縮方法。
         2. **ServerHello：**伺服器收到「ClientHello」後，會傳回「ServerHello」，表示接受了某個加密套件和 TLS 版本。伺服器也會發送自己的隨機號碼，用來幫助生成密鑰。
@@ -312,9 +298,12 @@ PKI架構示意圖
     - 強化資料加密與認證，提供更強大的安全保證。
 - 漏洞：
     - TLS 1.3 在設計上著重於安全性，目前沒有重大的安全漏洞，但仍會持續檢討與改進。
-    - 握手概述： TLS13
+    - 握手概述：
         
         ![tls13.png](static/tls13.png)
+        <aside>
+        💡TLS 1.3 handshake 流程
+        </aside>
         
     1. **ClientHello：**內容新增了密鑰交換算法（如 key_share）、PSK 模式等。
     2. **ServerHello：**伺服器提供自己的 key_share 和 PSK 信息，並加入了加密擴展。
