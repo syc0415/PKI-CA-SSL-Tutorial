@@ -117,8 +117,8 @@ Run:
 
 ### ScreenShots
 
-![server](../static/simulationImg/server.png)
-![client](../static/simulationImg/client.png)
+![server](../static/server.png)
+![client](../static/client.png)
 
 + Description:
   + The client will encrypt the string "simulation" and send its ciphertext to the server.
