@@ -92,7 +92,7 @@
 
 ### 5. **憑證吊銷清單（Certificate Revocation List, CRL）**
 
-- 存放在**憑證儲存庫（Certificate Repository）**中，由 **Directory Authority（DA）** 管理
+- 存放在**憑證儲存庫（Certificate Repository）** 中，由 **Directory Authority（DA）** 管理
 - DA 提供目錄瀏覽服務，負責將 RA 傳過來的使用者資訊以及數位憑證加入到伺服器上
 - DA 通常以公開可訪問的形式存在，使用者可以直接透過存取憑證儲存庫來取得其他使用者的公開數位憑證、最新的憑證撤銷清單（CRL）。
 - 為了提升效率，可透過 **OCSP（Online Certificate Status Protocol，線上憑證狀態協議）**查詢某個數位憑證的狀態，判斷該憑證是有效，而不須下載整個 CRL。
@@ -213,18 +213,18 @@
 
 **SSL（Secure Sockets Layer，安全套接層）** 和 **TLS（Transport Layer Security，傳輸層安全性）** 是用於保障網絡通信安全的加密協議。而 PKI 提供的數位簽章、數位憑證、公私鑰加密技術、身份驗證以及憑證吊銷管理，都是 SSL/TLS 協議能夠保證網路通信安全的基礎。
 
-- **SSL（Secure Sockets Layer，安全套接層）** ： 由 Netscape 開發的早期加密通訊協定，現在已被 TLS 取代。
-- **TLS（Transport Layer Security，傳輸層安全性）**：SSL 的繼承者，提供更安全的加密通訊協定。
+- **SSL（Secure Sockets Layer，安全套接層）：** 由 Netscape 開發的早期加密通訊協定，現在已被 TLS 取代。
+- **TLS（Transport Layer Security，傳輸層安全性）：** SSL 的繼承者，提供更安全的加密通訊協定。
 - 核心概念
     - 資料加密：確保資料在傳輸過程中不被截取或篡改。
     - 身分驗證：確保通訊雙方的可信度。
     - 資料完整性：確保資料在傳輸過程中不被修改。
 - 加密方法
-    - **對稱加密：**加密和解密使用相同的金鑰（例如：[DES](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-1/des.html) \ [AES](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-1/aes.html)）。
+    - **對稱加密：** 加密和解密使用相同的金鑰（例如：[DES](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-1/des.html) \ [AES](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-1/aes.html)）。
         
         [symmetricEncyrption.avif](static/symmetricEncyrption.avif)
         
-    - **非對稱加密：**使用一對公鑰和私鑰進行加密和解密（例如 [RSA](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-3/rsa.html)）。
+    - **非對稱加密：** 使用一對公鑰和私鑰進行加密和解密（例如 [RSA](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-3/rsa.html)）。
     
     [asymmetricEncryption.avif](static/asymmetricEncryption.avif)
     
