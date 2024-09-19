@@ -7,7 +7,7 @@
 ![Public-Key-Infrastructure.png](static/Public-Key-Infrastructure.png)
 
 <aside>
-💡PKI架構示意圖
+💡PKI 架構示意圖
 </aside>
 
 ### **1. 憑證授權機構（Certificate Authority, CA）**
