@@ -72,7 +72,7 @@
         - **簽發**：驗證完成後，CA 簽發數位憑證，其中包含持有者的公鑰及相關資訊。
         - **使用**：憑證持有者在與其他人通信或進行加密操作時，可以提供數位憑證以證明其身份，對方可以使用 CA 的公鑰來驗證憑證的真實性，進而信任持有者的公鑰。
             
-            ![Digital-Certificate-flow.png](static\Digital-Certificate-flow.png)
+            ![Digital-Certificate-flow.png](static/Digital-Certificate-flow.png)
             <aside>
             💡憑證的申請、發布、使用的簡單示意圖
             </aside>
