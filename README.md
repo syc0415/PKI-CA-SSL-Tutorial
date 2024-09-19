@@ -227,7 +227,6 @@
     - **非對稱加密：** 使用一對公鑰和私鑰進行加密和解密（例如 [RSA](https://l2x.gitbooks.io/understanding-cryptography/content/docs/chapter-3/rsa.html)）。
     
         ![asymmetricEncryption.avif](static/asymmetricEncryption.avif)
-    
 
 ### SSL（安全套接層）
 
